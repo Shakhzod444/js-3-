@@ -1,54 +1,129 @@
-let name = 'Alex'.toUpperCase().trim()
-let money = 10000
-let account = 7777
+let car1 = 'malibu'
+let car2 = 'tracker'
 
-let answer = prompt('Как вас зовут ?').toUpperCase().trim()
+let price1 = 32000
+let price2 = 24000
 
-if (answer === name) {
-   let parol = +prompt('Номер счёта ?')
+let hatch = 15
+let tonirovka = 5
+let color = 2
 
-   if (parol === account) {
-      let cash = +prompt('Сколько обналичить ?')
+let a = confirm('Выберите машину ' + 'MALIBU  нж Ok' + ' TRACKER  нж cancel')
+let totalDop = 0
 
-      if (cash <= money) {
-         alert('Вы сняли ' + cash + '$')
-         alert('Осталось ' + (money - cash) + '$')
-      } else {
-         alert('У тебя недостаточно средств , оформи кредит c 24% годовых !')
-      }
-   } else {
-      alert('Не мучай себя  ')
-   }
-} else {
-   alert('Пользователь не найден, ждём вас снова ! ')
-}
+if (a === true) {
+   alert(`
+  marka': malibu
+  engine: 2.2 
+  price : 32000
+  `)
+   let c = confirm('Хочешь доп комплектации ?')
 
+   if (c === true) {
+      let d = confirm('Хочешь люк ?')
+      if (d === true) {
 
+         totalDop = totalDop + hatch
+         let f = confirm('Хочешь тонировку ?')
 
-let name_Two = prompt('Как вас зовут ?').toLowerCase().trim()
+         if (f === true) {
+            totalDop = totalDop + tonirovka
+            let z = confirm('Какой цвет белый или черный ?')
 
-if (name_Two[0] === 'a') {
-   let age = prompt('Сколько вам лет ?')
+            if (z === true) {
+               totalDop = totalDop + color
+            }
 
-   if (age >= 20 && age <= 40) {
-      let mnm = +prompt('Сколько у вас денег ? ')
-
-      if (mnm > 100) {
-         let p = prompt('Вас сколько ?')
-
-         if (p <= 8) {
-            alert('Добро пожаловать !')
          } else {
-            alert('Вас много')
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+
          }
       } else {
-         alert('Мало денег ')
+         let f = confirm('Хочешь тонировку ?')
+
+         if (f === true) {
+            totalDop = totalDop + tonirovka
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+         } else {
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+
+         }
       }
-   } else {
-      alert('Твой возраст не подхоит !')
    }
 
-} else {
-   alert('Твое имя не подходит !')
+   let totalMoney = price1 + (price1 / 100 * totalDop)
+   confirm(`${'С выбранными допольнительными комплектациями Malibu состовляет : '}` + totalMoney + ' $'  
+   )
+
+} else if (a === false) {
+   alert(`
+   marka: tracker
+   engine:2.0
+   price: 24000
+   `)
+   let c = confirm('Хочешь доп комплектации ?')
+
+   if (c === true) {
+      let d = confirm('Хочешь люк ?')
+      if (d === true) {
+
+         totalDop = totalDop + hatch
+         let f = confirm('Хочешь тонировку ?')
+
+         if (f === true) {
+            totalDop = totalDop + tonirovka
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+
+         } else {
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+
+         }
+      } else {
+         let f = confirm('Хочешь тонировку ?')
+
+         if (f === true) {
+            totalDop = totalDop + tonirovka
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+         } else {
+            let z = confirm('Какой цвет белый или черный ?')
+
+            if (z === true) {
+               totalDop = totalDop + color
+            }
+
+         }
+      }
+   }
+
+   let totalMoney = price2 + (price2 / 100 * totalDop)
+  confirm(`${'С выбранными допольнительными комплектациями Tracker состовляет : '}` + totalMoney + ' $' 
+      
+  
+   )
 }
+
 
